@@ -1,0 +1,435 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+h2{
+    color:dodgerblue;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+.about, .project, .contact, footer{
+    font-family: 'Poppins', sans-serif;
+}
+.about .about-content, 
+.project .project-content,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #f051f0;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+/* navbar styling */
+.navbar{
+    opacity: .8;
+    position:fixed;
+    
+   background:midnightblue;
+
+    height: 70px;
+    width: 100%;
+    z-index: 999;
+    padding: 12px 0;
+    font-family: 'Times New Roman', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: rgb(240, 89, 2);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    margin-top: 200px;
+    color: orangered;
+    
+    font-family: 'Amaranth', sans-serif;
+
+    border-radius: 15%;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color:orangered;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: orangered;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    
+    border:2px orangered;
+    color:orangered;
+    padding: 7px;
+    font-family: 'Amaranth', sans-serif;
+    background-color:transparent;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu :hover{
+    
+    color:orange;
+    transform: 0.3px;   
+}
+.navbar.sticky .menu li a:hover{
+    color: red;
+}
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+  
+/* Home Section Styling */
+.home{
+    display: flex;
+    background-color: #FFB75E;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ED8F03, #FFB75E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 110vh;
+    color:rgb(219, 219, 219);
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Times New Roman', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 30px;
+}
+
+
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid rgb(220, 20, 170);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ h1
+{
+    color: orangered;
+    margin-left: 35%;
+    margin-top: 3%;
+    font-family: "Inter",sans-serif;
+}
+.submit
+{
+    color:white;
+    font-size: 20px;
+    margin-left: 10px;
+
+    height:40px;
+    width:553px;
+    align-items: center;
+    background-color:orangered;
+}
+
+input
+
+{
+    font-family: "Inter",sans-serif;
+    color: blue;
+    margin-left:10px;
+
+    height:40px;
+    width: 550px;
+
+    background-color:white;
+    border:1px solid orangered;
+}
+
+.date input
+{
+    height:40px;
+    width: 268px;
+
+}
+
+p
+{
+    font-family: "Inter",sans-serif;
+    margin-left:12px; 
+}
+h4
+{
+    text-align: center;
+    color: grey;
+    font-weight: lighter;
+    font-family: "Inter",sans-serif;
+}
+.box
+{
+    width: 580px;
+    height: 600px;
+    background:#fff;
+    vertical-align: center;
+    color:black;
+    top: 14%;
+    left: 32%;
+    position: absolute;
+    box-sizing: border-box;
+    border:1px solid red;
+    border-radius: 10px;
+    
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer Section Styling */
+
+
+
+footer{
+    background: #111;
+    padding: 25px 23px;
+    color: #fff;
+text-align:left;
+    
+}
+
+footer p {
+    margin-top: -50px;
+    margin-left: 1050px;
+}
+footer span {
+    
+    text-decoration: none;
+    
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Media Query Start */
+@media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .project .project-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .services .serv-content .card{
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
+
+    }
+}

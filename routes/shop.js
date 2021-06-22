@@ -1,13 +1,19 @@
-const express=require('express');
+const path = require('path');
 
-const router=express.Router();
-router.use((req,res,next)=>{
-    res.status(404).send('<h1>Page Not Found</h1>')
-  })
+const express = require('express');
 
+const router = express.Router();
 
-router.use('/', (req, res, next) => {
-    res.send('<h1>Hello from Express!</h1>');
-  });
+router.get('/', (req, res, next) => {
+  res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+});
 
-module.exports=router;
+router.post('/success',(req,res,next)=>{
+  res.send("<h1>Form filled Successfully</h1>")
+});
+
+router.get('/contact', (req, res, next) => {
+  res.sendFile(path.join(__dirname, '../', 'views', 'contact.html'));
+});
+
+module.exports = router;
