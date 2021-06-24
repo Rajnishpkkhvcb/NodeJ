@@ -4,13 +4,15 @@ const bodyParser = require('body-parser'); // Middleware
 
 //app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({
-  extended:true
-}));
+  extended:true}));
 
 // Route to Homepage
 app.get('/', (req, res) => {
-  res.send('<form action="/log" method="POST"><input type="text" name="useranme" placeholder="Username"><input type="text" name="message" placeholder="message"><button type="submit" palceholder="Send"></button></input></form>');
+  res.sendFile(__dirname+"/index.html");
 });
+
+
+  
 
 
 // Route to Login Page
@@ -19,14 +21,14 @@ app.get('/', (req, res) => {
 //});
 
 app.post('/log',(req,res)=>{
-  var useranme = String(req.body.useranme);
-  var message = String(req.body.message);
-  var result = useranme +":--" +  message ;
+  var username = String(req.body.username);
+  var message = String(req.body.Message);
+  var result = username +":--" + message ;
   res.send(result)
 })
 
 
-const port = 8020 // Port we will listen on
+const port =8020  // Port we will listen on
 
 // Function to listen on the port
 app.listen(port, () => console.log(`This app is listening on port ${port}`));

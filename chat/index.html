@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+</head>
+
+<body>
+	<h1>Welcome to messaging</h1>
+	<form action="/log" method="post">
+		<input type="text" name="username"
+			placeholder="Enter Ur Name">
+		<input type="text" name="Message"
+			placeholder="Enter ur message">
+			
+		<button type="submit" name="submit">
+			Send
+		</button>
+	</form>
+
+    <script>
+        var a = new Array();
+        var username = document.getElementById('username').value;
+        var message = document.getElementById('Message').value;
+        localStorage.setItem('name',username.value)
+        localStorage.setItem('Message',message.value)
+    </script>
+</body>
+
+</html>
